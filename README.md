@@ -8,7 +8,8 @@ This project implements Restricted Boltzmann Machines (RBMs) using PyTorch for (
 
 ## Usage
 
-```usage: train.py [-h] [--lr LR] [--epochs EPOCHS] [--batch-size BATCH_SIZE]
+``` 
+usage: train.py [-h] [--lr LR] [--epochs EPOCHS] [--batch-size BATCH_SIZE]
                 [--early-stop EARLY_STOP] [--visible-units VISIBLE_UNITS]
                 [--hidden-units HIDDEN_UNITS] [--no-cuda] [--cd-k CD_K]
                 [--type TYPE] [--sparsity-coeffectient SPARSITY_COEFFECTIENT]
