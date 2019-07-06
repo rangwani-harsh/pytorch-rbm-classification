@@ -7,8 +7,6 @@ class ClassificationRBM():
         self.num_hidden = num_hidden
         self.k = k
         self.learning_rate = learning_rate
-        self.momentum_coefficient = momentum_coefficient
-        self.weight_decay = weight_decay
         self.use_cuda = use_cuda
         self.num_classes = num_classes
         self.loss = torch.nn.CrossEntropyLoss()
@@ -149,7 +147,7 @@ class ClassificationRBM():
         batch_size = input_data.size(0)
         
         class_one_hot = torch.nn.functional.one_hot(class_label, num_classes = self.num_classes).float()
-        o_y_j =  self._sigmoid((torch.matmul(input_data, self.weights)+ self.hidden_bias).unsqueeze(-1).expand(-1, -1, self.num_classes) + self.class_weights.t())
+        o_y_j =  self._sigmoid((torch.matmul(input_data, self.weights)+ self.hidden_bias).unsqueeze_(-1).expand(-1, -1, self.num_classes) + self.class_weights.t())
         #print(o_y_j)
         class_probabilities = self.sample_class_given_x(input_data)
 

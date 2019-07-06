@@ -2,9 +2,11 @@
 
 
 
+
 ## Overview
 
-This project implements Restricted Boltzmann Machines (RBMs) using PyTorch for (see `rbm.py`).
+This project implements Restricted Boltzmann Machines (RBMs) for classification using PyTorch for (see `classification_rbm.py`).
+This is the open source implementation of the paper [Classification using Discriminative Restricted Boltzmann Machines](www.dmi.usherb.ca/~larocheh/publications/icml-2008-discriminative-rbm.pdf). In this implementation we only test on the MNIST dataset.
 
 ## Usage
 
@@ -39,9 +41,10 @@ optional arguments:
                         every update
   --data-folder DATA_FOLDER
                         Folder in which the data needs to be stored
-
+  --generative-factor GENERATIVE_FACTOR
 ```
 
+The configuration used in the paper are present in the file **reproduce.sh**
+which can be run by: 
+```./reproduce.sh```
 
-## References 
-Coming Soon
