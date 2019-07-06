@@ -46,5 +46,10 @@ optional arguments:
 
 The configuration used in the paper are present in the file **reproduce.sh**
 which can be run by: 
+
 ```./reproduce.sh```
+
+## Requirements
+* python 3
+* pytorch 1.0
 
